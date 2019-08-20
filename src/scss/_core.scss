@@ -23,7 +23,7 @@ h1 {
   color: black;
 }
 h2 {
-  font-family: VremenaBookItalic;
+  font-family: GothamProRegular;
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
@@ -52,6 +52,7 @@ p{
   letter-spacing: normal;
   color: black;
 }
+
 .d-flex {
   display: -webkit-flex;
   display: -moz-flex;
@@ -60,584 +61,198 @@ p{
   display: flex;
 }
 
+.block-dealership-application{
+  // background: #eeeeee;
+  width: 100%;
+  max-width: 900px;
+  // height: auto;
+  // height: 600px;
+  margin: 100px auto;
+  padding: 30px 10px;
+  // border: #cccccc solid 1px;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
 
-.first-screen{
+}
+.block-dealership-application__title{
+  height: auto;
   width: 100%;
-  height: 100vh;
-  max-height: 850px;
-  justify-content: flex-start;
-  background-image: url(../img/BlondeGirl2.jpg);
-  background-size: auto 100%;
-  background-position: 100% 0%;
-  background-repeat: no-repeat;
-  animation: fadeIn 2s both 0.2s;
+  max-width: 700px;
+  margin: 0px auto;
 }
-// ВЕСЬ ЛЕВЫЙ БЛОК С КОНТЕНТОМ НА ПЕРВОМ ЭКРАНЕ
-.container-leftblock{
-  width: 45%;
-  height: 100%;
-  animation: fadeInLeft 0.8s both 1.4s;
-  // background: rgb(240, 173, 240);
-  background: #fff;
-  align-items: flex-end;
-  flex-direction: column;
-  h1{
-    width: 80%;
-    margin-top: 5vh;
-    margin-left: 5vw;
-  }
-  .soc-network{
-    margin-left: 5vw;
-  }
-}
-.container-top{
+.block-dealership-application__block-application{
   width: 100%;
-  height: 10%;
-  justify-content: flex-end;
-}
-.container-logo-telephon{
-  width:85%;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: center;
-}
-.logo{
-  height: 40%;
-  width: auto;
-}
-.logo-text{
-  height: 40%;
-  margin-left: 15px;
-  padding-left: 5px;
-  border-left: rgb(24, 24, 24) solid 1px;
-  p{
-    margin-top: 2px;
-  }
-}
-// БЛОК С ОСНОВНЫМ СООБЩЕНИЕМ
-.offer{
-  background: rgb(63, 63, 63);
-  width: 85%;
-  height: 70%;
-  flex-direction: column;
-  justify-content: space-around;
-  animation: fadeInDown 1s both 2s;
-  h1{
-    color: #fff;
-  }
-  button{
-    min-width: 200px;
-    font-size: 16px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    align-self: flex-end;
-  }
-}
-.soc-network{
-  // width: 80%;
-  height: 10%;
-  min-height: 60px;
-  min-width: 115px;
+  max-width: 700px;
+  margin: 40px auto 20px;
+  // height: 400px;
+  // background: #af42a6;
   justify-content: space-between;
-  align-self: flex-start;
-  margin-right: 5vw;
 }
-.soc-network>a>img{
-  height: 80%;
-  width: auto;
-  filter: invert(100%);
-}
-// БЛОК С ПАТТЕРНОМ ПОЛОСКИ
-.container-bottom{
-  width: 100%;
-  height: 20%;
-  // background: #d86aae;
-  background-image: url(../img/./62712.png) ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: flex-end;
-  align-items: center;
-  animation: fadeIn 2s both 2.2s;
+.block-application__input{
+  width: calc(50% - 20px);
+  max-width: 700px;
+  // height: 200px;
+  margin-top: 20px;
+  // background: #eeeeee;
+  flex-direction: column;
   p{
     font-family: GothamProMedium;
-    width: 85%;
-    font-size: 24px;
-    color: #fff;
-    margin: 10px 0;
-  }
-}
-.cover-pattern{
-  background: #d86aaee7;
-  // height: 40%;
-  justify-content: flex-end;
-  animation: fadeInLeft 2.3s both 1s;
-
-}
-// БУРГЕР НА ОСНОВНОМ ЭКРАНЕ
-.container-contacts{
-  margin-left: auto;
-  height: 100%;
-  // min-width: 100px;
-  width: 7.5%;
-  min-width: 125px;
-  background: #fff;
-  justify-content: flex-start;
-}
-.contacts{
-  width: 100%;
-  height: 10%;
-  background: rgb(63, 63, 63);
-}
-
-
-
-
-// ПОРТФОЛИО
-.portfolio-screen{
-  width: 100%;
-  height: 100vh;
-  max-height: 550px;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  justify-content: center;
-  align-content: flex-end;
-}
-.container-portfolio{
-  width: 85%;
-  max-width: 1600px;
-  height: 100%;
-  background: #fff;
-}
-.portfolio-title{
-  width: 40%;
-  height: 100%;
-  position: relative;
-  z-index: 10;
-  h1{
-    width: 95%;
-    position: relative;
-    z-index: 10;
-  }
-}
-.portfolio-pattern-block{
-  background-image: url(../img/89197.jpg);
-  background-size: cover;
-  width: 130%;
-  height: 90%;
-  top: 15%;
-  left: 5%;
-  position: absolute;
-  z-index: 1;
-  animation: fadeIn 2s both 2.2s;
-}
-.portfolio-carousel{
-  width: 60%;
-  height: 100%;
-  position: relative;
-  z-index: 11;
-}
-.portfolio-carousel>.owl-carousel>.owl-stage-outer{
-  width: 90%;
-}
-
-
-
-
-// ОБУЧЕНИЕ
-.learning-screen{
-  width: 100%;
-  // height: 100vh;
-  max-height: 500px;
-  justify-content: center;
-  align-content: flex-end;
-}
-.container-learning{
-  width: 85%;
-  max-width: 1600px;
-  height: 100%;
-  // margin-top: 50px;
-  // background: #fff;
-}
-.learning-left-block{
-  width: 40%;
-  max-width: 500px;
-  height: 90%;
-  background: #eb97eeb0;
-  position: relative;
-  z-index: 12;
-  h1{
-    color: #fff;
-    margin-left: 20px;
-    margin-top: 3vh;
-  }
-}
-.learn-img{
-  border: #fff solid 10px;
-  width: 90%;
-  height: 85%;
-  background-image: url(../img/Screenshot.png);
-  background-size: cover;
-  background-position: 10% 20%;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: 13;
-  top: 30%;
-  left: 20%;
-}
-.learning-right-block{
-  width: 50%;
-  height: 100%;
-  form{
-    border: #A83279 solid 2px;
-    margin-top: 40px;
-    margin-left: 15vw;
-    padding: 20px;
-    input{
-      width: 100%;
-      height: 30px;
-      margin-top: 10px;
-      margin-bottom: 40px;
-      border-left: none;
-      border-top: none;
-      border-right: none;
-      border-bottom: #A83279 solid 2px;
-    }
-  }
-  input.form-container__btn{
-    width: 70%;
-    height: 60px;
-    border-bottom: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 45px;
-  }
-}
-.learning-right-block-top{
-  width: 100%;
-  background: #fff;
-  // padding-top: 80px;
-  h2{
-    // margin-left: 100px;
-    margin-left: 15vw;
-    margin-bottom: 20px;
-  }
-  p{
+    color: #616161;
     font-size: 16px;
-    width: 80%;
-    // margin-left: 120px;
-    margin-left: 15vw;
+    line-height: 1.6;
+    margin-bottom: 30px;
   }
   button{
-    // margin-left: 15vw;
-    // margin-top: 60px;
-    font-size: 16px;
-  }
-}
-
-$gradient-start: rgb(223, 152, 60);
-$gradient-end: #A83279;
-.form-container__btn,.btn {
-  /* reset */
-  -webkit-appearance: none;
-  border: 0;
-  outline: 0;
-  /* styles */
-  position: relative;
-  background: linear-gradient(45deg, $gradient-start 10%, $gradient-end 90%);
-  background-size: 200% 100%;
-  padding: 1.2rem 1.8rem;
-  color: white;
-  border-radius: 100px;
-  font-size: 16px;
-  // font-size: 1.3rem;
-  font-family: "GothamProMedium";
-  transition: .3s;
-  animation: bruh 3s linear infinite;
-}
-
-@keyframes bruh {
-  0% {
-  background-position: 0 0;
-  }
-
-  50% {
-  background-position: 100% 0;
-  }
-
-  100% {
-  background-position: 0 0;
-  }
-}
-
-
-.price-screen{
-  width: 100%;
-  margin-top: 150px;
-  background: #fff;
-  justify-content: center;
-}
-.container-price{
-  width: 100%;
-  max-width: 1600px;
-  margin-left: 20px;
-  margin-top: 100px;
-  margin-bottom: 150px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.price-left-block{
-  width: 50%;
-  // min-width: 425px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.price-right-block{
-  width: 50%;
-  // min-width: 425px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.price-item{
-  width: 80%;
-  min-width: 400px;
-  max-width: 500px;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-.item-service{
-  justify-content: space-between;
-  margin-bottom: 5px;
-  h4{
-    font-family: "VremenaBoldItalic";
-    color: #af42a6;
-  }
-  p{
-    font-family: "GothamProRegular";
-    margin-bottom: 10px;
-  }
-}
-.title-service{
-  margin-bottom: 10px;
-}
-// БЛОК О САЛОНЕ
-.about-us-screen{
-  width: 100%;
-  height: 450px;
-  // background: rgb(233, 45, 45);
-  justify-content: center;
-  margin-bottom: 150px;
-}
-.container-about-us{
-  width: 85%;
-  background: #fff;
-  justify-content: center;
-}
-.title-about-us{
-  position: relative;
-  z-index: 14;
-  width: 130px;
-  background: #af42a6be;
-  p{
-    font-family: "GothamProMedium";
-    transform: rotate(-90deg);
-    right: -10%;
-    bottom: 30%;
-    font-size: 80px;
-    position: absolute;
-    z-index: 15;
-  }
-}
-.block-about-us{
-  width: 60%;
-  background-image: url(../img/interior.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-left: 20px;
-}
-.info-about-us{
-  width: 60%;
-  min-width: 350px;
-  height: 50%;
-  padding: 20px 20px;
-  background: rgb(255, 255, 255);
-  margin-bottom: -10px;
-  margin-right: -130px;
-  p{
-    margin-top: 20px;
-  }
-}
-
-.employees-screen{
-  width: 100%;
-  // height: 450px;
-  // background: rgb(233, 45, 45);
-  justify-content: center;
-  margin-bottom: 100px;
-}
-.container-employees{
-  width: 85%;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-  max-width: 1600px;
-  background: rgb(255, 255, 255);
-}
-.employees-left-block{
-  width: 50%;
-  min-width: 350px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.employees-right-block{
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2{
-    margin-bottom: 100px;
-  }
-}
-.profile-employees{
-  width: 250px;
-  height: 300px;
-  background-image: url(../img/BlondeGirl2.jpg);
-  background-size: cover;
-  background-position: 80% 0;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-bottom: 150px;
-}
-.name-employees{
-  width: 100%;
-  height: 100px;
-  background: #af42a6be;
-  margin-bottom: -50px;
-  margin-right: -50px;
-}
-
-
-
-.advantages-screen{
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 150px;
-}
-.container-advantages{
-  width: 100%;
-  background-image: url(../img/idei-modnogo-dizajna-nogtej.jpg);
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 90% 10%;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1600px;
-  // background: rgb(255, 255, 255);
-}
-.advantages-left-block{
-  width: 40%;
-  justify-content: flex-end;
-  background: #fff;
-}
-.advantages-offer{
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 400px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  h2{
-    margin-top: 40px;
     margin-bottom: 20px;
-    width: 80%;
-    margin-left: 3vw;
-  }
-  p{
-    margin-left: 3vw;
-    line-height: 1.5;
-    font-size: 16px;
   }
 }
-.advantages-list{
-  width: 100%;
-  margin-top: 50px;
-  margin-left: 3vw;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.advantages-item{
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border: #af42a6 solid 2px;
+
+button{
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  // text-transform: uppercase;
+  height: 50px;
+  width: 210px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(135, 137, 139, 0.384);
+  span{
+      color: $red;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.7px;
+  }
+  &:hover {
+      animation: rotate 0.7s ease-in-out both;
+      span{
+          animation: storm 0.7s ease-in-out both;
+          animation-delay: 0.06s;
+      }
+  }
 }
-.advantages-right-block{
-  width: 60%;
-}
-footer{
-  width: 100%;
-  height: 350px;
-  background: rgb(63, 63, 63);
-  justify-content: center;
-}
-.container-footer{
-  width: 100%;
-  height: 100%;
-  max-width: 1600px;
-  justify-content: center;
-  background: rgb(63, 63, 63);
 
+@keyframes rotate{
+    0%
+        {transform: rotate(0deg) translate3d(0, 0, 0)}
+    25%
+        {transform: rotate(3deg) translate3d(0, 0, 0)}
+    50%
+        {transform: rotate(-3deg) translate3d(0, 0, 0)}
+    75%
+        {transform: rotate(1deg) translate3d(0, 0, 0)}
+    100%
+        {transform: rotate(0deg) translate3d(0, 0, 0)}
 }
-.footer-map{
-  width: 30%;
-  height: 100%;
-  background-image: url(../img/map.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+@keyframes storm{
+    0%
+        {transform: translate3d( 0, 0, 0) translateZ(0)}
+    25%
+        {transform: translate3d( 4px, 0, 0) translateZ(0)}
+    50%
+        {transform: translate3d( -3px, 0, 0) translateZ(0)}
+    75%
+        {transform: translate3d( 2px, 0, 0) translateZ(0)}
+    100%
+        {transform: translate3d( 0, 0, 0) translateZ(0)}
 }
-.footer-info{
-  width: 40%;
-  height: 80%;
-  margin-top: 40px;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
-  span{
-    font-family: "GothamProRegular";
-    font-size: 16px;
-    color: #fff;
-  }
-}
-.footer-telephone-adress{
+
+
+
+
+
+.block-application__value{
+  width: calc(50% - 20px);
+  max-width: 700px;
+  // height: 200px;
   margin-top: 20px;
-  margin-bottom: 30px;
-  span{
-    display: inline-block;
-    margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  // background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.17);
+
+  input{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // text-transform: uppercase;
+    height: 50px;
+    width: 210px;
+    margin-top: auto;
+    margin-bottom: 30px;
+    background: $red;
+    color: #ffffff;
+    font-size: 18px;
+    // margin-bottom: 30px;
   }
 }
-.footer-soc-network{
-  margin-bottom: 10px;
-}
-.footer-soc-network>a>img{
-  height: 40px;
-  width: auto;
+.block-application__value-wraper{
+  width: calc(100% - 40px);
+  max-width: 700px;
+  // height: 200px;
   margin-top: 30px;
-  margin-right: 20px;
-  filter: invert(100%);
-}
-.footer-btn-online{
-  button{
+  flex-direction: column;
+  // background: #ffffff;
+  p{
+    font-family: GothamProMedium;
     font-size: 16px;
+    margin-bottom: 20px;
+  }
+  span{
+  font-family: GothamProRegular;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  color: black;
   }
 }
-// .footer-telephone,.footer-adress,.footer-soc-network,.footer-btn-online{
-//   margin-left: 50px;
-// }
+.block-application__value-disclamer{
+  width: calc(100% - 40px);
+  // margin-top: auto;
+  margin-bottom: 30px;
+  p{
+    font-size: 14px;
+    color: #616161;
+  }
+}
+
+.block-application__value-cost,
+.block-application__value-name,
+.block-application__value-products,
+.block-application__value-employees,
+.block-application__value-pay
+{
+  color: $red;
+  font-family: GothamProRegular;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.value-cost__value,
+.value-name__value,
+.value-products__value,
+.value-employees__value,
+.value-pay__value
+{
+  margin-left: 20px;
+  word-wrap: break-word;
+  text-align: end;
+}
+
+input.notactive{
+  background: #e0e0e0;
+}

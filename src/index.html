@@ -3,10 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>zhishi</title>
+  <title>lesson1</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script type="text/javascript" src="./js/mycode.js"></script>
+  <!-- <script type="text/javascript" src="./js/mycode.js"></script> -->
 </head>
 <body>
+  <div class="block-dealership-application">
+    <div class="block-dealership-application__title">
+      <h2>Заявка на получение условий для диллеров:</h2>
+    </div>
+    <div class="block-dealership-application__block-application d-flex">
+      <div class="block-application__input d-flex">
+        <p>Укажите данные приведенные в списке:</p>
+        <button class="btn btn-cost">
+          <span>Бюджет закупок</span>
+        </button>
+
+        <button class="btn btn-name">
+          <span>Название организации</span>
+        </button>
+
+        <button class="btn btn-products">
+          <span>Интересующие продукты</span>
+        </button>
+
+        <button class="btn btn-employees">
+          <span>Список сотрудников</span>
+        </button>
+
+        <button class="btn btn-pay">
+          <span>Оплата</span>
+        </button>
+      </div>
+      <div class="block-application__value  d-flex">
+        <div class="block-application__value-wraper d-flex">
+          <p>Заявка:</p>
+
+
+          
+          <div class="block-application__value-cost d-flex">
+            <div class="value-cost__title"><span>Бюджет:</span></div>
+            <div class="value-cost__value"></div>
+          </div>
+          <div class="block-application__value-name d-flex">
+            <div class="value-name__title"><span>Название:</span></div>
+            <div class="value-name__value"></div>
+          </div>
+          <div class="block-application__value-products d-flex">
+            <div class="value-products__title"><span>Продукты:</span></div>
+            <div class="value-products__value"></div>
+          </div>
+          <div class="block-application__value-employees d-flex">
+            <div class="value-employees__title"><span>Сотрудники:</span></div>
+            <div class="value-employees__value"></div>
+          </div>
+          <div class="block-application__value-pay d-flex">
+            <div class="value-pay__title"><span>Оплата:</span></div>
+            <div class="value-pay__value"></div>
+          </div>
+        </div>
+
+          
+
+        <input class="inpsub notactive" type="submit" value="Отправить" disabled>
+        <div class="block-application__value-disclamer">
+          <p>Все поля <strong>обязательны</strong> к заполнению</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  
+  <script src="./js/mycode.js"></script>
 </body>
 </html>
