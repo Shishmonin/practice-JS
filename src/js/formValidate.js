@@ -24,22 +24,28 @@ console.log(inpSub);
 
 btnsArea[0].addEventListener('click', function (e){
   if(event.target && event.target.matches('button.btn-cost')){
-    cost = parseInt (prompt("Бюджет на закупку товара каждый месяц", "Указывайте сумму числами"));
-    console.log(cost);
+    cost = parseInt(prompt("Бюджет на закупку товара каждый месяц", "Указывайте сумму числами"));
+    // console.log(!Number.isNaN(cost));
+    // check let cost type number
     if (typeof cost === "number" && !Number.isNaN(cost) && cost !== Infinity && cost !== -Infinity) {
       cost = cost;
       costVal[0].textContent = cost + ' rub';
-
     } else {
       cost = undefined;
       costVal[0].innerHTML = "<span> <strong>Не число</strong> </span>";
     };
     // console.log(cost);
-
     // costVal[0].textContent = cost + ' rub';
   }else if(event.target && event.target.matches('button.btn-name')){
     name = prompt("Название компании", "Укажите название именно самого ООО");
-    nameVal[0].textContent = name;
+    if (name !== "") {
+      name = name;
+      nameVal[0].textContent = name;
+    } else {
+      name = undefined;
+      nameVal[0].textContent = "";
+    };
+    // nameVal[0].textContent = name;
   }else if(event.target && event.target.matches('button.btn-products')){
     products = prompt("Перечень продуктов", "Названия линеек указывайте через запятую");
     productsVal[0].textContent = products;
@@ -49,6 +55,7 @@ btnsArea[0].addEventListener('click', function (e){
   }else if(event.target && event.target.matches('button.btn-pay')){
     pay = prompt("Вид оплаты", "Полная предоплата, Оплата половины суммы, Постоплата");
     payVal[0].textContent = pay;
+    console.log(pay);
   };
 
   if (typeof(cost) != 'undefined' && typeof(name) != 'undefined' && typeof(products) != 'undefined' && typeof(employees) != 'undefined' && typeof(pay) != 'undefined')

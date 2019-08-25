@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>coffeeBuy</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <script type="text/javascript" src="./js/mycode.js"></script> -->
+</head>
+<body>
+  <!-- <div class="block-dealership-application">
+    <div class="block-dealership-application__title">
+      <h2>Заявка на получение условий для диллеров:</h2>
+    </div>
+    <div class="block-dealership-application__block-application d-flex">
+      <div class="block-application__input d-flex">
+        <p>Укажите данные приведенные в списке:</p>
+        <button class="btn btn-cost">
+          <span>Бюджет закупок</span>
+        </button>
+
+        <button class="btn btn-name">
+          <span>Название организации</span>
+        </button>
+
+        <button class="btn btn-products">
+          <span>Интересующие продукты</span>
+        </button>
+
+        <button class="btn btn-employees">
+          <span>Список сотрудников</span>
+        </button>
+
+        <button class="btn btn-pay">
+          <span>Оплата</span>
+        </button>
+      </div>
+      <div class="block-application__value  d-flex">
+        <div class="block-application__value-wraper d-flex">
+          <p>Заявка:</p>
+
+          <div class="block-application__value-cost d-flex">
+            <div class="value-cost__title"><span>Бюджет:</span></div>
+            <div class="value-cost__value"></div>
+          </div>
+          <div class="block-application__value-name d-flex">
+            <div class="value-name__title"><span>Название:</span></div>
+            <div class="value-name__value"></div>
+          </div>
+          <div class="block-application__value-products d-flex">
+            <div class="value-products__title"><span>Продукты:</span></div>
+            <div class="value-products__value"></div>
+          </div>
+          <div class="block-application__value-employees d-flex">
+            <div class="value-employees__title"><span>Сотрудники:</span></div>
+            <div class="value-employees__value"></div>
+          </div>
+          <div class="block-application__value-pay d-flex">
+            <div class="value-pay__title"><span>Оплата:</span></div>
+            <div class="value-pay__value"></div>
+          </div>
+        </div>
+
+        <input class="inpsub notactive" type="submit" value="Отправить" disabled>
+        <div class="block-application__value-disclamer">
+          <p>Все поля <strong>обязательны</strong> к заполнению</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div> -->
+
+
+  <div class="block-main-coffeebuy d-flex">
+    <h1>Доставка кофе для всех страждущих</h1>
+    <div class="block-main-coffeebuy__wraper-cal-list d-flex">
+      <!-- Блок с калькуляцией заказа -->
+      <div class="wraper-cal-list__calc-check">
+        <!-- Текстовое описание -->
+        <div class="calc-check__title">
+          <p>Зачем ходить за кофе, когда можно не ходить за кофе</p>
+        </div>
+        <!-- Список добавленных позиций -->
+        <div class="calc-check___list-add-drinks">
+          <div class="list-add-drinks__position d-flex">
+            <div class="list-add-drinks__name-position">gjkguogoighoihih</div>
+            <div class="list-add-drinks__cost">133</div>
+            <div class="list-add-drinks__number">2</div>
+          </div>
+        </div>
+        <div class="calc-check___total-price d-flex">
+          <p>Итого:</p>
+          <div class="total-price__price"><p>0</p></div>
+        </div>
+        <!-- Кнопка заказать -->
+        <button>заказать</button>
+      </div>
+
+
+
+      <div class="wraper-cal-list__tabs d-flex">
+        <div class="lists-drink__nav tabs-nav d-flex">
+          <div class="nav__item active" data-tab-name="tab-1"><p>Classic</p> </div>
+          <div class="nav__item" data-tab-name="tab-2"><p>Coffee drink</p> </div>
+          <div class="nav__item" data-tab-name="tab-3"><p>Ice coffee</p> </div>
+          <div class="nav__item" data-tab-name="tab-4"><p>Cocoa</p> </div>
+        </div>
+        <div class="lists-drink__content d-flex">
+          <div id="goods" class="tab active tab-1"></div>
+          <div class="tab tab-2"></div>
+          <div class="tab tab-3"></div>
+          <div class="tab tab-4"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/coffeeBuy.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/eshop.js"></script>
+</body>
+</html>

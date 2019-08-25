@@ -12,7 +12,7 @@ gulp.task('browser-sync', function() {
     server: {
       baseDir: "src/",
       // ПРОПИСЫВАЙ НАЗВАНИЕ HTML ФАЙЛА С КОТОРЫМ СЕЙЧАС РАБОТАЕШЬ
-      index: "index.html"
+      index: "coffeeBuy.html"
     },
     notify: false,
   });

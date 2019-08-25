@@ -256,3 +256,188 @@ button{
 input.notactive{
   background: #e0e0e0;
 }
+// 
+// 
+// 
+// 
+// 
+// 
+// СВОЙСТВА ДЛЯ COFFEEBUY.HTML
+// 
+// 
+// 
+// 
+// 
+.block-main-coffeebuy{
+  // background: #eeeeee;
+  width: 100%;
+  max-width: 1100px;
+  // height: auto;
+  // height: 600px;
+  margin: 100px auto;
+  padding: 30px 10px;
+  flex-direction: column;
+  // border: #cccccc solid 1px;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+  h1 {
+    font-family: GothamProMedium;
+    margin-bottom: 30px;
+  }
+}
+
+.block-main-coffeebuy__wraper-cal-list{
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
+.wraper-cal-list__calc-check{
+  width: calc(30% - 10px);
+  // min-height: 300px;
+  // max-height: 600px;
+  // max-width: 350px;
+  // height: 200px;
+  // margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+  // background: #eeeeee;
+  flex-direction: column;
+  p{
+    font-family: GothamProMedium;
+    color: #616161;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  button{
+    margin: 30px auto 30px;
+  }
+}
+
+.calc-check__title{
+  width: calc(100% - 40px);
+  margin: 30px auto 20px;
+}
+.calc-check___list-add-drinks{
+  width: calc(100% - 40px);
+  margin: 0px 0px 20px;
+}
+.calc-check___total-price{
+  width: calc(100% - 40px);
+  margin: 0px auto 20px;
+  p{
+    margin-right: 80px;
+  }
+}
+.list-add-drinks__position{
+  justify-content: space-around;
+}
+
+
+
+
+
+
+.wraper-cal-list__tabs{
+  width: calc(70% - 10px);
+  // max-width: 700px;
+  // height: 200px;
+  // margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+  // background: #eeeeee;
+  flex-direction: column;
+  align-items: center;
+
+  p{
+    font-family: GothamProMedium;
+    color: #616161;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  button{
+    margin-bottom: 20px;
+  }
+}
+
+.lists-drink__nav{
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.nav__item.active{
+  p{
+    color: red;
+  }
+}
+
+.lists-drink__content{
+  width: 100%;
+  // height: 400px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  // box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+  justify-content: center;
+
+}
+.tab{
+  display: none;
+  width: calc(100% - 40px);
+}
+.tab.active{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tab-1{
+  // background: #af42a6;
+}
+.tab-2{
+  background: #5f42af;
+}
+.tab-3{
+  background: #42a8af;
+}
+.tab-4{
+  background: #afa442;
+}
+
+.card-drink{
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+  // border: #616161 solid 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  img{
+    width: 90%;
+    // max-height: 300px;
+    align-self: center;
+  }
+  p{
+    display: inline;
+    margin-left: 20px;
+    font-family: GothamProRegular;
+  }
+  h2{
+    font-size: 24px;
+    margin-left: 20px;
+  }
+  button{
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 50px;
+    width: 180px;
+    background-color: #d8ca4d;
+    border: none;
+    p{
+      font-family: GothamProMedium;
+      color: #ffffff;
+      margin-left: 0px;
+    }
+  }
+}
