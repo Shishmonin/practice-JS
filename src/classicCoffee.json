@@ -1,54 +1,54 @@
 {
-  "00001" : {
+  "10001" : {
     "name" : "Эспрессо",
     "cost" : 69,
     "ml" : 40,
     "compose" : "самы классический эспрессо в мире",
     "image" : "./img/coffeeBuy/classic/espresso.jpg"
   },
-  "00002" : {
+  "10002" : {
     "name" : "Эспрессо Американо",
     "cost" : 99,
     "ml" : 150,
     "compose" : "с добавлением воды",
     "image" : "./img/coffeeBuy/classic/amerikano.jpg"
   },
-  "00003" : {
+  "10003" : {
     "name" : "Эспрессо Доппио",
     "cost" : 69,
     "ml" : 80,
     "compose" : "двойной эспрессо",
     "image" : "./img/coffeeBuy/classic/espresso-doppio.jpg"
   },
-  "00004" : {
+  "10004" : {
     "name" : "Дабл Американо",
     "cost" : 149,
     "ml" : 300,
     "compose" : "двойной американо",
     "image" : "./img/coffeeBuy/classic/amerikano-bolshoj.jpg"
   },
-  "00005" : {
+  "10005" : {
     "name" : "Дабл Капучино",
     "cost" : 169,
     "ml" : 300,
     "compose" : "двойной капучино",
     "image" : "./img/coffeeBuy/classic/kapuchino-bolsho.jpg"
   },
-  "00006" : {
+  "10006" : {
     "name" : "Капучино",
     "cost" : 129,
     "ml" : 180,
     "compose" : "капучино с пенкой",
     "image" : "./img/coffeeBuy/classic/kapuchino.jpg"
   },
-  "00007" : {
+  "10007" : {
     "name" : "Латте классический",
     "cost" : 139,
     "ml" : 260,
     "compose" : "эспрессо, молоко, молочная пенка",
     "image" : "./img/coffeeBuy/classic/latte.jpg"
   },
-  "00008" : {
+  "10008" : {
     "name" : "Латте большой",
     "cost" : 189,
     "ml" : 400,
@@ -56,14 +56,14 @@
     "image" : "./img/coffeeBuy/classic/latte-bolshoj.jpg"
   },
 
-  "00009" : {
+  "10009" : {
     "name" : "Флэт Уайт",
     "cost" : 149,
     "ml" : 170,
     "compose" : "эспрессо доппио, молоко",
     "image" : "./img/coffeeBuy/classic/latte-bolshoj.jpg"
   },
-  "00010" : {
+  "10010" : {
     "name" : "Раф",
     "cost" : 189,
     "ml" : 220,

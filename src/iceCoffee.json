@@ -1,0 +1,10 @@
+{
+  "30001" : {
+    "name" : "Фраппучино",
+    "cost" : 149,
+    "ml" : 400,
+    "compose" : "эспрессо, сахарный сироп, молоко, лед фраппе",
+    "image" : "./img/coffeeBuy/ice_coffe/iceCoffee.jpg"
+  }
+
+}

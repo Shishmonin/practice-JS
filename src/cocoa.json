@@ -1,0 +1,49 @@
+{
+  "40001" : {
+    "name" : "Какао (большой)",
+    "cost" : 149,
+    "ml" : 400,
+    "compose" : "горячий шоколад с молоком",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/cocoaBig.jpg"
+  },
+  "40002" : {
+    "name" : "Горячий шоколад с апельсином",
+    "cost" : 219,
+    "ml" : 205,
+    "compose" : "шоколад «монбана», молоко, мусс шоколадный, цедра апельсина",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/hot_chocolateOrange .jpg"
+  },
+  "40003" : {
+    "name" : "Какао",
+    "cost" : 99,
+    "ml" : 220,
+    "compose" : "горячий шоколад с молоком",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/cocoa.jpg"
+  },
+
+
+
+  "40004" : {
+    "name" : "Какао «Соленая карамель» с жареным зефиром",
+    "cost" : 199,
+    "ml" : 325,
+    "compose" : "горячий шоколад, сироп «соленая карамель», зефир домашний, молоко, соль",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/cocoaZefir.jpg"
+  },
+  "40005" : {
+    "name" : "Раф «Маскарпоне/печенье»",
+    "cost" : 199,
+    "ml" : 220,
+    "compose" : "сыр «маскарпоне», сироп «печенье», сливки, молоко, эспрессо",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/rafMascarpone.jpg"
+  },
+  "40006" : {
+    "name" : "Горячий шоколад",
+    "cost" : 199,
+    "ml" : 140,
+    "compose" : "шоколад «монбана», молоко",
+    "image" : "./img/coffeeBuy/cocoa_chokolate/hot_chocolate.jpg"
+  }
+
+
+}
