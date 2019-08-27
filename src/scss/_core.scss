@@ -462,9 +462,14 @@ input.notactive{
 }
 
 
-.card{
+.card,
+.card1,
+.card2,
+.card3
+{
   flex-direction: column;
 }
+
 .add-drink{
   position: relative;
   margin-bottom: 25px;
@@ -476,7 +481,10 @@ input.notactive{
     height: 20px;
     margin: 0 0;
   }
-  button.dell{
+  button.dell,
+  button.dell1,
+  button.dell2,
+  button.dell3{
     border: none;
     font-size: 20px;
     color: red;
