@@ -322,7 +322,7 @@ input.notactive{
 }
 .calc-check___list-add-drinks{
   width: calc(100% - 40px);
-  margin: 0px 0px 20px;
+  margin: 0px auto 20px;
 }
 .calc-check___total-price{
   width: calc(100% - 40px);
@@ -458,5 +458,48 @@ input.notactive{
     img{
       height: 250px;
     }
+  }
+}
+
+
+.card{
+  flex-direction: column;
+}
+.add-drink{
+  position: relative;
+  margin-bottom: 25px;
+  p{
+    margin-bottom: 10px;
+  }
+  button{
+    width: 30px;
+    height: 20px;
+    margin: 0 0;
+  }
+  button.dell{
+    border: none;
+    font-size: 20px;
+    color: red;
+  }
+  .add-drink__sum{
+  width: 100%;
+  }
+}
+.sum__counter{
+  width: 30%;
+  justify-content: space-between;
+  margin-right: 100px;
+  // margin-bottom: 20px;
+}
+
+.add-drink__del{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.add-drink:hover{
+  .add-drink__del{
+    display: flex;
   }
 }

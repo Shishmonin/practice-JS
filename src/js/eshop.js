@@ -8,7 +8,8 @@ $('document').ready(function(){
     loadCocoa();
 
     testCheck();
-    showCheck();
+    // showCheck();
+    reloadAll();
 
 });
 
@@ -42,10 +43,7 @@ function loadClassic() {
 // Сохранение в локалстор
 function addToCheck() {
     // добавление позиции в счет
-    // let articul = $(this).attr('data-atr');
-    let articul = $(this).attr('data-name');
-
-    // check[ $(this).attr('data-cost'), $(this).attr('data-name')];
+    let articul = $(this).attr('data-atr');
     // Проверка на количество товара при нажатии на кнопку
     if (check[articul] != undefined) {
         check[articul]++;
@@ -54,16 +52,15 @@ function addToCheck() {
     }
     // сохранение в localStorage
     localStorage.setItem('check', JSON.stringify(check) );
-
     console.log(check);
-    showCheck()
-}
+    reloadAll();
 
+}
 // Проверка нашего чека в let check на наличие уже лежащих позиций
 function testCheck() {
     // Проверка на существующие позиции счета в localStorage
     if (localStorage.getItem('check') != null) {
-    // Достаем из локалстор значения в переменную let check 
+    // Достаем из локалстор значения в переменную let check
         check = JSON.parse (localStorage.getItem('check'));
     }
 }
@@ -76,21 +73,79 @@ function testCheck() {
 //     $('.calc-check___list-add-drinks').html(out);
 // }
 
-$.getJSON('classicCoffee.json', function(data) {
-    let clasCoff = data;
-    // console.log(data);
-    // console.log(check);
-    showCheck();
+function reloadAll(){
+    $.getJSON('classicCoffee.json', function(data) {
+        let clasCoff = data;
+        // console.log(data);
+        // console.log(check);
+        testCheck();
+        showCheck();
 
-})
+        function showCheck() {// Добавление позиции напитка в чек с отрисовкой
+            let out = '';
+            for (let i in check){
+                out+='<div class="add-drink" >';
 
-function showCheck() {
-    let out = '';
-    for (let i in check){
-        out += i +check[i]+ '</br>';
-    }
-    $('.card').html(out);
+                out+='<div class="add-drink__name d-flex" >';
+                out+='<p>'+ clasCoff[i]['name']+ '</p>';
+                out+='</div>';
+
+                out+='<div class="add-drink__sum d-flex">';
+                out+='<div class="sum__counter d-flex">';
+                out+='<button class="minus" data-atr="'+i+'" >-</button>' +check[i]+ '<button class="plus" data-atr="'+i+'" >+</button>';
+                out+='</div>';
+                out+='<div class="sum__price d-flex">';
+                out+=check[i]*clasCoff[i].cost;
+                out+='</div>';
+                out+='</div>';
+
+                out+='<div class="add-drink__del d-flex">';
+                out+='<button class="dell" data-atr="'+i+'" >x</button>';
+                out+='</div>';
+
+                out+='</div>';
+            }
+            $('.card').html(out);
+            $('.plus').on('click', plusCoffee);
+            $('.minus').on('click', minusCoffee);
+            $('.dell').on('click', deleteCoffee);
+        }
+
+        function plusCoffee() {
+            let articuls = $(this).attr('data-atr');
+            check[articuls]++;
+            saveCheckToLS();// Сохранение числа кружек в локалстор
+            showCheck();// Отрисовка в чеке заново
+        }
+
+        function minusCoffee() {
+            let articuls = $(this).attr('data-atr');
+            if (check[articuls]>1){
+                check[articuls]--;
+            }
+            else {
+                delete check[articuls];
+            }
+            saveCheckToLS();// Сохранение числа кружек в локалстор
+            showCheck();// Отрисовка в чеке заново
+        }
+
+        function deleteCoffee() {
+            let articuls = $(this).attr('data-atr');
+            delete check[articuls];
+            saveCheckToLS();// Сохранение числа кружек в локалстор
+            showCheck();// Отрисовка в чеке заново
+        }
+    })
 }
+
+// Сохранение числа кружек в локалстор после нажатия на + или -
+function saveCheckToLS() {
+    localStorage.setItem('check', JSON.stringify(check) );
+
+}
+
+
 
 
 
