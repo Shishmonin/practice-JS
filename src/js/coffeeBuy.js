@@ -1,3 +1,4 @@
+// Переключение табами разделов с кофейными напитками
 let tab = function () {
   let tabNav = document.querySelectorAll('.nav__item');
   let tabContent = document.querySelectorAll('.tab');
@@ -19,9 +20,12 @@ let tab = function () {
   function selectTabContent(tabName) {
     tabContent.forEach(item => {
       item.classList.contains(tabName) ? item.classList.add('active') :
-       item.classList.remove('active');
+      item.classList.remove('active');
     })
   }
 
 };
 tab();
+
+
+

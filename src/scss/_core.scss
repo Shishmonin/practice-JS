@@ -295,14 +295,12 @@ input.notactive{
 
 .wraper-cal-list__calc-check{
   width: calc(30% - 10px);
-  // min-height: 300px;
-  // max-height: 600px;
-  // max-width: 350px;
-  // height: 200px;
-  // margin-top: 20px;
+  border-radius: 10px;
+}
+.calc-check__check{
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
-  // background: #eeeeee;
   flex-direction: column;
   p{
     font-family: GothamProMedium;
@@ -314,11 +312,32 @@ input.notactive{
   button{
     margin: 30px auto 30px;
   }
+  button.btn-check{
+    margin: 30px auto 30px;
+    height: 50px;
+    width: 180px;
+    background-color: #cc3b3b;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: GothamProMedium;
+  }
+
 }
 
 .calc-check__title{
   width: calc(100% - 40px);
   margin: 30px auto 20px;
+  p{
+    color: #353535;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  span{
+    font-family: GothamProRegular;
+    color: #616161;
+    font-size: 16px;
+  }
 }
 .calc-check___list-add-drinks{
   width: calc(100% - 40px);
@@ -327,8 +346,12 @@ input.notactive{
 .calc-check___total-price{
   width: calc(100% - 40px);
   margin: 0px auto 20px;
-  p{
-    margin-right: 80px;
+  
+}
+.total-price__price{
+  margin-left: 40px;
+  p{  
+    color: red;
   }
 }
 .list-add-drinks__position{
@@ -393,19 +416,6 @@ input.notactive{
   justify-content: space-around;
 }
 
-.tab-1{
-  // background: #af42a6;
-}
-.tab-2{
-  // background: #5f42af;
-}
-.tab-3{
-  // background: #42a8af;
-}
-.tab-4{
-  // background: #afa442;
-}
-
 .card-drink{
   width: calc(50% - 20px);
   margin-bottom: 20px;
@@ -413,10 +423,7 @@ input.notactive{
   flex-direction: column;
   align-items: flex-start;
   img{
-    // width: 90%;
-    // max-width: 306px;
     height: auto;
-    // max-height: 300px;
     align-self: center;
   }
   p{
@@ -460,7 +467,6 @@ input.notactive{
     }
   }
 }
-
 
 .card,
 .card1,
@@ -509,5 +515,82 @@ input.notactive{
 .add-drink:hover{
   .add-drink__del{
     display: flex;
+  }
+}
+
+
+
+.calc-check__API-block{
+  width: 100%;
+  // height: 300px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+  flex-direction: column;
+  p{
+    font-family: GothamProMedium;
+    color: #616161;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  button{
+    margin: 30px auto 30px;
+  }
+}
+
+.API-block__wraper{
+  width: calc(100% - 40px);
+  margin: 30px auto 20px;
+  flex-direction: column;
+}
+
+.API-block__title{
+  width: 100%;
+  margin: 0px auto 20px;
+  p{
+    color: #353535;
+    font-size: 20px;
+  }
+}
+.API-block__change-city{
+  select{
+    font-size: 16px;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+}
+.API-block__temp{
+  margin-bottom: 20px;
+  p{
+    display: inline;
+  }
+}
+.API-block__recomend{
+  margin-bottom: 20px;
+  font-family: GothamProBold;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  color: red;
+}
+#city{
+  width: calc(100% - 40px);
+  height: 150px;
+  border: #cccccc solid 1px;
+  border-radius: 10px;
+  // box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
+
+  // flex-flow: column;
+  overflow: auto;
+  p{
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: black;
   }
 }

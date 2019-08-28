@@ -10,19 +10,97 @@ $('document').ready(function(){
     loadCoffeeDrink();
     loadIceCoffee();
     loadCocoa();
+    loadCity();
 
     testCheck();
     testCheck1();
     testCheck2();
     testCheck3();
 
-    // showCheck();
     reloadAll();
     reloadAll1();
     reloadAll2();
     reloadAll3();
 
 });
+
+// Переменные для ApI блока
+let tempVal = document.getElementsByClassName('temp-value');
+let apiRec = document.getElementsByClassName('API-block__recomend');
+
+// API блок с рекомендациями
+function loadCity() {
+    // Загрузка базы json по городам
+    $.getJSON('citylist.json', function (data) {
+        $('select').on('change', function(){
+            let out = '';
+            // Выведение списка городов в #city  в виде параграфов с уникальным id
+            for (let key in data){
+                if (data[key].country == $('select option:selected').val()){
+                    out += '<p value="'+data[key].id+'">'+data[key].name+'</p>';
+                }
+            }
+            $('#city').html(out);
+            // По клику на название города выводить ниже температуру в нем
+            $('#city p').on('click', function(){
+                $.get(
+                    "http://api.openweathermap.org/data/2.5/weather",
+                    {
+                        "id" : $(this).attr('value'),
+                        "appid": "70e1ed322b02acbc57d443dd91065f3e"
+                    },
+                    // При сверке со значением температуры выводить разные сообщения на страницу в блоке рекомендаций
+                    function (data) {
+                        let out = '';
+                        // Присвоение переменной и выведение данных из api запроса в блок #temp
+                        out +='<p> Температура: <p class="temp-value">'+Math.round(data.main.temp-273)+'</p> &#176;C</p>';
+                        $('#temp').html(out);
+                        console.log(+tempVal[0].innerHTML);
+                        if(+tempVal[0].innerHTML >= 10 && +tempVal[0].innerHTML <= 20){
+                            apiRec[0].textContent = "Самая прекрасная погода для прогулки! Возьмите эспрессо для активизации жизненного тонуса!";
+                        }else if (+tempVal[0].innerHTML > 0 && +tempVal[0].innerHTML < 10){
+                            apiRec[0].textContent = "Погода не для прогулок! Возьмите любой напиток из раздела cocoa и заройтесь под одеяло";
+                        }else if (+tempVal[0].innerHTML > 20){
+                            apiRec[0].textContent = "В такую жару только холодненького! Берите ice coffee!";
+                        }else if (+tempVal[0].innerHTML <= 0){
+                            apiRec[0].textContent = "В такую холодную погоду подойдут только горячие напитки в самой большой кружке. Возьмите любой напиток из раздела Coffee drink";
+                        };
+                    }
+                );
+            });
+        });
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function loadClassic() {
     //загружаю товары на страницу
@@ -49,6 +127,33 @@ function loadClassic() {
 
     })
 }
+
+
+
+
+
+
+
+// Получаем переменные для подсчета стоимости заказа из выбранных позиций
+let btns = document.getElementsByClassName('sum__price');
+let totalScore = document.getElementsByClassName('total-price__price');
+
+function calcScore(btns) {
+    let arr1 = [];
+    // Перебор коллекции в новый массив с полученными числами из оной
+    for(let i = 0; i < btns.length; i++){
+    arr1.push(+btns[i].innerHTML);
+    }
+
+    let arr2 = 0;
+    // Перебор массива с сложением всех цен
+    for(let i = 0; i < arr1.length; i++){
+        arr2 += arr1[i];
+    }
+    console.log(arr2);
+    totalScore[0].innerHTML = "<p>" +arr2+ " руб </p>";
+}
+
 
 // Сохранение в локалстор
 function addToCheck() {
@@ -156,6 +261,7 @@ function reloadAll(){
         let clasCoff = data;
         testCheck();
         showCheck();
+        calcScore(btns);
 
         function showCheck() {// Добавление позиции напитка в чек с отрисовкой
             let out = '';
@@ -191,6 +297,7 @@ function reloadAll(){
             check[articuls]++;
             saveCheckToLS();// Сохранение числа кружек в локалстор
             showCheck();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function minusCoffee() {
@@ -203,6 +310,7 @@ function reloadAll(){
             }
             saveCheckToLS();// Сохранение числа кружек в локалстор
             showCheck();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function deleteCoffee() {
@@ -210,6 +318,7 @@ function reloadAll(){
             delete check[articuls];
             saveCheckToLS();// Сохранение числа кружек в локалстор
             showCheck();// Отрисовка в чеке заново
+            calcScore(btns);
         }
     })
 }
@@ -268,6 +377,7 @@ function reloadAll1(){
         let coffDrink = data;
         testCheck1();
         showCheck1();
+        calcScore(btns);
 
         function showCheck1() {// Добавление позиции напитка в чек с отрисовкой
             let out = '';
@@ -303,6 +413,7 @@ function reloadAll1(){
             check1[articuls]++;
             saveCheckToLS1();// Сохранение числа кружек в локалстор
             showCheck1();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function minusCoffee1() {
@@ -315,6 +426,7 @@ function reloadAll1(){
             }
             saveCheckToLS1();// Сохранение числа кружек в локалстор
             showCheck1();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function deleteCoffee1() {
@@ -322,34 +434,10 @@ function reloadAll1(){
             delete check1[articuls];
             saveCheckToLS1();// Сохранение числа кружек в локалстор
             showCheck1();// Отрисовка в чеке заново
+            calcScore(btns);
         }
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -381,12 +469,12 @@ function loadIceCoffee() {
     })
 }
 
-
 function reloadAll2(){
     $.getJSON('iceCoffee.json', function(data) {
         let iceCoff = data;
         testCheck2();
         showCheck2();
+        calcScore(btns);
 
         function showCheck2() {// Добавление позиции напитка в чек с отрисовкой
             let out = '';
@@ -422,6 +510,7 @@ function reloadAll2(){
             check2[articuls]++;
             saveCheckToLS2();// Сохранение числа кружек в локалстор
             showCheck2();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function minusCoffee2() {
@@ -434,6 +523,7 @@ function reloadAll2(){
             }
             saveCheckToLS2();// Сохранение числа кружек в локалстор
             showCheck2();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function deleteCoffee2() {
@@ -441,29 +531,10 @@ function reloadAll2(){
             delete check2[articuls];
             saveCheckToLS2();// Сохранение числа кружек в локалстор
             showCheck2();// Отрисовка в чеке заново
+            calcScore(btns);
         }
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -495,14 +566,13 @@ function loadCocoa() {
     })
 }
 
-
-
-
 function reloadAll3(){
     $.getJSON('cocoa.json', function(data) {
         let cocoDrink = data;
         testCheck3();
         showCheck3();
+        calcScore(btns);
+
 
         function showCheck3() {// Добавление позиции напитка в чек с отрисовкой
             let out = '';
@@ -528,6 +598,7 @@ function reloadAll3(){
 
                 out+='</div>';
             }
+
             $('.card3').html(out);
             $('.plus3').on('click', plusCoffee3);
             $('.minus3').on('click', minusCoffee3);
@@ -538,6 +609,7 @@ function reloadAll3(){
             check3[articuls]++;
             saveCheckToLS3();// Сохранение числа кружек в локалстор
             showCheck3();// Отрисовка в чеке заново
+            calcScore(btns);
         }
 
         function minusCoffee3() {
@@ -550,14 +622,28 @@ function reloadAll3(){
             }
             saveCheckToLS3();// Сохранение числа кружек в локалстор
             showCheck3();// Отрисовка в чеке заново
+            calcScore(btns);
         }
-
         function deleteCoffee3() {
             let articuls = $(this).attr('data-atr3');
             delete check3[articuls];
             saveCheckToLS3();// Сохранение числа кружек в локалстор
             showCheck3();// Отрисовка в чеке заново
+            calcScore(btns);
         }
     })
 }
 
+// console.log((btns[0].innerHTML));
+
+
+// let arr = [3,2,5,6];
+
+// function arraySum(array){
+//     let sum = 0;
+//     for(let i = 0; i < array.length; i++){
+//     sum += +btns[i].innerHTML;
+//     }
+//     console.log(sum);
+// }
+// arraySum(btns);

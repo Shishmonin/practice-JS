@@ -11,34 +11,72 @@
   <div class="block-main-coffeebuy d-flex">
     <h1>Доставка кофе для всех страждущих</h1>
     <div class="block-main-coffeebuy__wraper-cal-list d-flex">
-      <!-- Блок с калькуляцией заказа -->
+
+      <!-- Блок обертка с калькуляцией заказа -->
       <div class="wraper-cal-list__calc-check">
-        <!-- Текстовое описание -->
-        <div class="calc-check__title">
-          <p>Зачем ходить за кофе, когда можно не ходить за кофе</p>
+        <!-- Блок с добавленными позициями и кнопкой заказа -->
+        <div class="calc-check__check d-flex">
+          <!-- Текстовое описание -->
+          <div class="calc-check__title">
+            <p>Зачем ходить за кофе, когда можно заказать кофе!</p>
+            <span>Выполним заказ в течении часа.</span>
+          </div>
+          <!-- Список добавленных позиций -->
+          <div class="calc-check___list-add-drinks">
+            <div class="card d-flex">
+
+            </div>
+            <div class="card1 d-flex">
+
+            </div>
+            <div class="card2 d-flex">
+
+            </div>
+            <div class="card3 d-flex">
+
+            </div>
+          </div>
+          <!-- Строка с финальной стоимостью -->
+          <div class="calc-check___total-price d-flex">
+            <p>Итого:</p>
+            <div class="total-price__price"><p>0</p></div>
+          </div>
+          <button class="btn-check">Заказать</button>
         </div>
-        <!-- Список добавленных позиций -->
-        <div class="calc-check___list-add-drinks">
-          <div class="card d-flex">
+
+        <!-- Блок с рекомендациями по API -->
+        <div class="calc-check__API-block d-flex">
+          <div class="API-block__wraper d-flex">
+            <!-- Текстовое описание -->
+            <div class="API-block__title">
+              <p>Узнай какой напиток мы рекомендуем в твоем городе:</p>
+            </div>
+            <div class="API-block__change-city">
+              <p>
+                <label for="">Страна: </label>
+                <select name="sel-city" id="sel-city">
+                  <option  selected>Выберите страну</option>
+                  <option value="RU">Россия</option>
+                  <option value="UA">Украина</option>
+                </select>
+              </p>
+              <p>
+                <label for="">Город: </label>
+                <div id="city"></div>
+              </p>
+            </div>
+            <div id="temp" class="API-block__temp">
+            </div>
+            <div class="API-block__recomend">
+            </div>
 
           </div>
-          <div class="card1 d-flex">
 
-          </div>
-          <div class="card2 d-flex">
-
-          </div>
-          <div class="card3 d-flex">
-
-          </div>
         </div>
-        <div class="calc-check___total-price d-flex">
-          <p>Итого:</p>
-          <div class="total-price__price"><p>0</p></div>
-        </div>
-        <!-- Кнопка заказать -->
-        <button>заказать</button>
       </div>
+
+
+
 
 
 
