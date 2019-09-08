@@ -269,32 +269,28 @@ input.notactive{
 // 
 // 
 .block-main-coffeebuy{
-  // background: #eeeeee;
   width: 100%;
-  max-width: 1100px;
-  // height: auto;
-  // height: 600px;
+  max-width: 1200px;
   margin: 100px auto;
   padding: 30px 10px;
   flex-direction: column;
-  // border: #cccccc solid 1px;
   border-radius: 10px;
   box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
   h1 {
     font-family: GothamProMedium;
-    margin-bottom: 30px;
+    margin: 10px auto 30px;
   }
 }
 
 .block-main-coffeebuy__wraper-cal-list{
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 
 
 .wraper-cal-list__calc-check{
-  width: calc(30% - 10px);
+  width: calc(30% - 20px);
   border-radius: 10px;
 }
 .calc-check__check{
@@ -361,13 +357,8 @@ input.notactive{
 
 
 
-
-
 .wraper-cal-list__tabs{
-  width: calc(70% - 10px);
-  // max-width: 700px;
-  // height: 200px;
-  // margin-top: 20px;
+  width: calc(70% - 20px);
   border-radius: 10px;
   box-shadow: 0 9px 56px 0 rgba(112, 116, 119, 0.27);
   // background: #eeeeee;
@@ -384,7 +375,11 @@ input.notactive{
     margin-bottom: 20px;
   }
 }
-
+#coffeedrink-content{
+  :nth-child(1){
+    justify-content: center;
+  }
+}
 .lists-drink__nav{
   width: 100%;
   justify-content: space-around;
@@ -419,7 +414,7 @@ input.notactive{
 .card-drink{
   width: calc(50% - 20px);
   margin-bottom: 20px;
-  // border: #616161 solid 1px;
+  min-height: 514px;
   flex-direction: column;
   align-items: flex-start;
   img{
@@ -439,8 +434,8 @@ input.notactive{
     align-self: flex-end;
     margin-right: 20px;
     margin-top: 20px;
-    height: 50px;
-    width: 180px;
+    height: 40px;
+    width: 150px;
     background-color: #d8ca4d;
     border: none;
     p{
@@ -479,6 +474,9 @@ input.notactive{
 .add-drink{
   position: relative;
   margin-bottom: 25px;
+  // border-top: #fff solid 1px;
+  // border-bottom: #fff solid 1px;
+
   p{
     margin-bottom: 10px;
   }
@@ -497,12 +495,13 @@ input.notactive{
   }
   .add-drink__sum{
   width: 100%;
+  max-width: 250px;
   }
 }
 .sum__counter{
   width: 30%;
   justify-content: space-between;
-  margin-right: 100px;
+  margin-right: 20px;
   // margin-bottom: 20px;
 }
 
@@ -513,11 +512,17 @@ input.notactive{
   top: 0;
 }
 .add-drink:hover{
+  // border-top: #dfdfdf solid 1px;
+  // border-bottom: #dfdfdf solid 1px;
+
   .add-drink__del{
     display: flex;
   }
 }
-
+.sum__price{
+  margin-top: 1px;
+  margin-left: auto;
+}
 
 
 .calc-check__API-block{
